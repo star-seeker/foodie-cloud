@@ -1,0 +1,18 @@
+## 启动顺序 #1
+spring:
+  application:
+    name: eureka-server-peer
+  profiles:
+    active: dev
+
+server:
+  port: 20001
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://peer:20000/eureka
+  instance:
+    hostname: peer1
